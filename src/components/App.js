@@ -4,7 +4,7 @@ import Main from "./Main";
 import Footer from "./Footer";
 
 import PopupWithForm from "./PopupWithForm";
-import PopupWithImage from "./PopupWithImage";
+import PopupImage from "./PopupImage";
 
 import "../index.css";
 
@@ -105,7 +105,7 @@ function App() {
         </button>
       </PopupWithForm>
 
-      <PopupWithImage
+      <PopupImage
         card={selectedCard}
         onClose={closeAllPopups}
       />
