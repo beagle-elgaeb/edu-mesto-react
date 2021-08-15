@@ -1,6 +1,6 @@
 import buttonClosePopup from "../images/button-сlose.svg";
 
-function PopupWithImage({card, onClose}) {
+function PopupImage({card, onClose}) {
   if (!card) {
     return null;
   }
@@ -18,4 +18,4 @@ function PopupWithImage({card, onClose}) {
   );
 }
 
-export default PopupWithImage;
+export default PopupImage;
