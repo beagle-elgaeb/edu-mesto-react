@@ -6,7 +6,7 @@ function PopupWithImage({card, onClose}) {
   }
 
   return (
-    <div className="popup popup_type_pic popup_opened">
+    <div className="popup popup_type_pic popup_opened"  onClick={onClose}>
       <div className="popup__container-pic">
         <img className="popup__pic" alt="Изображение отсутствует" src={card.link} />
         <h2 className="popup__pic-title">{`${card.name} || ${card.owner.name} (${card.owner.about})`}</h2>

@@ -2,8 +2,8 @@ import buttonClosePopup from "../images/button-сlose.svg";
 
 function PopupWithForm(props) {
   return (
-    <div className={`popup popup_type_${props.name} ${props.isOpen ? "popup_opened" : ""} `}>
-      <div className="popup__container">
+    <div className={`popup popup_type_${props.name} ${props.isOpen ? "popup_opened" : ""} `} onClick={props.onClose}>
+      <div className="popup__container" onClick={(e) => e.stopPropagation()}>
         <h2 className="popup__title">{props.title}</h2>
         <form className={`popup__form popup__form_type_${props.name} `} name={`form - ${props.name} `} noValidate>
           {props.children}
