@@ -55,6 +55,7 @@ function App() {
         isOpen={editAvatarPopupOpen}
         name="edit-avatar"
         title="Обновить аватар"
+        buttonText="Сохранить"
         onClose={closeAllPopups}
       >
         <fieldset className="popup__fieldset">
@@ -62,15 +63,13 @@ function App() {
             required />
           <span className="popup__error url-avatar-input-error"></span>
         </fieldset>
-        <button className="popup__button-save" type="submit" aria-label="Сохранить">
-          Сохранить
-        </button>
       </PopupWithForm>
 
       <PopupWithForm
         isOpen={editProfilePopupOpen}
         name="edit-profile"
         title="Редактировать профиль"
+        buttonText="Сохранить"
         onClose={closeAllPopups}
       >
         <fieldset className="popup__fieldset">
@@ -81,15 +80,13 @@ function App() {
             type="text" name="profession" required minLength="2" maxLength="200" />
           <span className="popup__error about-you-input-error"></span>
         </fieldset>
-        <button className="popup__button-save" type="submit" aria-label="Сохранить">
-          Сохранить
-        </button>
       </PopupWithForm>
 
       <PopupWithForm
         isOpen={addCardPopupOpen}
         name="add-card"
         title="Новое место"
+        buttonText="Создать"
         onClose={closeAllPopups}
       >
         <fieldset className="popup__fieldset">
@@ -100,9 +97,6 @@ function App() {
             type="url" name="pic" required />
           <span className="popup__error url-pic-input-error"></span>
         </fieldset>
-        <button className="popup__button-save" type="submit" aria-label="Создать">
-          Создать
-        </button>
       </PopupWithForm>
 
       <ImagePopup
