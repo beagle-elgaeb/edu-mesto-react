@@ -14,9 +14,7 @@ function AddPlacePopup(props) {
     setPic(e.target.value);
   }
 
-  function handleSubmit(e) {
-    e.preventDefault();
-
+  function handleSubmit() {
     props.onAddPlace({
       title,
       pic
