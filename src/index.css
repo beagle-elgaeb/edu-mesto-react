@@ -36,6 +36,7 @@
 @import url(./blocks/card/card.css);
   @import url(./blocks/card/__button-delete/card__button-delete.css);
   @import url(./blocks/card/__button-delete/_disabled/card__button-delete_disabled.css);
+  @import url(./blocks/card/__button-delete/_wait/card__button-delete_wait.css);
   @import url(./blocks/card/__button-delete-img/card__button-delete-img.css);
   @import url(./blocks/card/__photo/card__photo.css);
   @import url(./blocks/card/__title-and-like/card__title-and-like.css);

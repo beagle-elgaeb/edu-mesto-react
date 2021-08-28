@@ -41,26 +41,26 @@ class Api {
     return this._wrapPromise(promise);
   }
 
-  setProfileData(inputsObject) {
+  setProfileData(name, about) {
     const promise = fetch(`${this._baseUrl}/${this._groupID}/users/me`, {
       method: "PATCH",
       headers: this._headers,
       body: JSON.stringify({
-        name: inputsObject.fullName,
-        about: inputsObject.profession
+        name,
+        about
       })
-    })
+    }) 
 
     return this._wrapPromise(promise);
   }
 
-  createCard(inputsObject) {
+  createCard(name, link) {
     const promise = fetch(`${this._baseUrl}/${this._groupID}/cards`, {
       method: "POST",
       headers: this._headers,
       body: JSON.stringify({
-        name: inputsObject.title,
-        link: inputsObject.pic
+        name,
+        link
       })
     })
 

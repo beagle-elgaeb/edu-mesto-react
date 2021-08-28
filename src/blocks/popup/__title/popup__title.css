@@ -12,7 +12,6 @@
     width: 238px;
     line-height: 22px;
     font-size: 18px;
-    margin-top: 25px;
-    margin-bottom: 45px;
+    margin: 25px 0 25px 0;
   }
 }
