@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.56038784.chunk.css",
+    "main.js": "/static/js/main.bcff3e9a.chunk.js",
+    "main.js.map": "/static/js/main.bcff3e9a.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ef99b0a4.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ef99b0a4.js.map",
+    "static/js/2.d93bd9d8.chunk.js": "/static/js/2.d93bd9d8.chunk.js",
+    "static/js/2.d93bd9d8.chunk.js.map": "/static/js/2.d93bd9d8.chunk.js.map",
+    "static/js/3.944cac09.chunk.js": "/static/js/3.944cac09.chunk.js",
+    "static/js/3.944cac09.chunk.js.map": "/static/js/3.944cac09.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.56038784.chunk.css.map": "/static/css/main.56038784.chunk.css.map",
+    "static/js/2.d93bd9d8.chunk.js.LICENSE.txt": "/static/js/2.d93bd9d8.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/like.1ad06e85.svg",
+    "static/media/button-add.bed8c136.svg": "/static/media/button-add.bed8c136.svg",
+    "static/media/button-delete.e3c42771.svg": "/static/media/button-delete.e3c42771.svg",
+    "static/media/button-edit.6c7bf054.svg": "/static/media/button-edit.6c7bf054.svg",
+    "static/media/button-сlose.9f1fbe67.svg": "/static/media/button-сlose.9f1fbe67.svg",
+    "static/media/loader.3e10a767.gif": "/static/media/loader.3e10a767.gif",
+    "static/media/logo.9acae848.svg": "/static/media/logo.9acae848.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ef99b0a4.js",
+    "static/js/2.d93bd9d8.chunk.js",
+    "static/css/main.56038784.chunk.css",
+    "static/js/main.bcff3e9a.chunk.js"
+  ]
+}
