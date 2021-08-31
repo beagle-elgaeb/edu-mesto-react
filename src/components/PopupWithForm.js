@@ -1,37 +1,48 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 import buttonClosePopup from "../images/button-сlose.svg";
 
-function PopupWithForm(props) {
+function PopupWithForm({ title, name, buttonText, children, onSubmit, isOpen, onClose }) {
   const [isSubmit, setIsSubmit] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsSubmit(false);
+  }, [isOpen]);
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    props.onSubmit();
+    onSubmit();
     setIsSubmit(true);
   }
 
-  React.useEffect(() => {
-    setIsSubmit(false);
-  }, [props.isOpen]);
-
   return (
-    <div className={`popup popup_type_${props.name} ${props.isOpen ? "popup_opened" : ""} `} onClick={props.onClose}>
+    <div className={`popup popup_type_${name} ${isOpen ? "popup_opened" : ""} `} onClick={onClose}>
       <div className="popup__container" onClick={(e) => e.stopPropagation()}>
-        <h2 className="popup__title">{props.title}</h2>
-        <form className={`popup__form popup__form_type_${props.name} `} name={`form - ${props.name}`} onSubmit={handleSubmit} >
-          {props.children}
+        <h2 className="popup__title">{title}</h2>
+        <form className={`popup__form popup__form_type_${name} `} name={`form - ${name}`} onSubmit={handleSubmit} >
+          {children}
           <button className="popup__button-save" type="submit" aria-label="Сохранить">
-            {props.buttonText}{isSubmit ? "..." : ""}
+            {buttonText}{isSubmit ? "..." : ""}
           </button>
         </form>
-        <button className="popup__button-close" type="button" aria-label="Закрыть окно" onClick={props.onClose}>
+        <button className="popup__button-close" type="button" aria-label="Закрыть окно" onClick={onClose}>
           <img className="popup__button-close-img" src={buttonClosePopup} alt="Закрыть окно" />
         </button>
       </div>
     </div>
   );
+}
+
+PopupWithForm.propTypes = {
+  title: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  buttonText: PropTypes.string.isRequired,
+  children: PropTypes.element.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
 }
 
 export default PopupWithForm;

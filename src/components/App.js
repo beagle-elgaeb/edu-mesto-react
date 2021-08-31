@@ -18,6 +18,23 @@ function App() {
   const [editAvatarPopupOpen, setEditAvatarPopupOpen] = React.useState(false);
   const [editProfilePopupOpen, setEditProfilePopupOpen] = React.useState(false);
   const [addCardPopupOpen, setAddCardPopupOpen] = React.useState(false);
+  const [selectedCard, setSelectedCard] = React.useState();
+  const [currentUser, setCurrentUser] = React.useState({});
+  const [cards, setCards] = React.useState([]);
+
+  React.useEffect(() => {
+    Promise.all([
+      api.getProfileData(),
+      api.getInitialCards()
+    ])
+      .then(([profile, cards]) => {
+        setCurrentUser(profile);
+        setCards(cards);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+  }, []);
 
   function handleEditAvatarClick() {
     setEditAvatarPopupOpen(true);
@@ -38,23 +55,9 @@ function App() {
     setSelectedCard(undefined);
   }
 
-  const [selectedCard, setSelectedCard] = React.useState();
-
   function handleCardClick(card) {
     setSelectedCard(card);
   }
-
-  const [currentUser, setCurrentUser] = React.useState({});
-
-  React.useEffect(() => {
-    api.getProfileData()
-      .then((result) => {
-        setCurrentUser(result);
-      })
-      .catch((err) => {
-        console.log(err);
-      })
-  }, []);
 
   function handleUpdateUser(data) {
     api.setProfileData(data.name, data.about)
@@ -78,18 +81,6 @@ function App() {
       })
   }
 
-  const [cards, setCards] = React.useState([]);
-
-  React.useEffect(() => {
-    api.getInitialCards()
-      .then((cards) => {
-        setCards(cards);
-      })
-      .catch((err) => {
-        console.log(err);
-      })
-  }, []);
-
   function handleCardLike(card) {
     const isLiked = card.likes.some(i => i._id === currentUser._id);
 
@@ -109,7 +100,6 @@ function App() {
   }
 
   function handleCardDelete(card) {
-
     setCards((state) => state.map((c) => c._id === card._id ? { ...c, deleteClicked: true } : c));
 
     api.removeCard(card._id)

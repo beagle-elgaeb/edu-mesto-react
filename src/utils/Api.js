@@ -1,7 +1,3 @@
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// ~~~~~~~~~~ ЗАПРОСЫ К СЕРВЕРУ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 class Api {
   constructor(options) {
     this._baseUrl = options.baseUrl;
@@ -16,7 +12,7 @@ class Api {
       }
     })
 
-    return this._wrapPromise(promise);
+    return this._handleResult(promise);
   }
 
   getProfileData() {
@@ -26,7 +22,7 @@ class Api {
       }
     })
 
-    return this._wrapPromise(promise);
+    return this._handleResult(promise);
   }
 
   setAvatar(avatar) {
@@ -38,7 +34,7 @@ class Api {
       })
     })
 
-    return this._wrapPromise(promise);
+    return this._handleResult(promise);
   }
 
   setProfileData(name, about) {
@@ -51,7 +47,7 @@ class Api {
       })
     }) 
 
-    return this._wrapPromise(promise);
+    return this._handleResult(promise);
   }
 
   createCard(name, link) {
@@ -64,7 +60,7 @@ class Api {
       })
     })
 
-    return this._wrapPromise(promise);
+    return this._handleResult(promise);
   }
 
   removeCard(id) {
@@ -73,7 +69,7 @@ class Api {
       headers: this._headers
     })
 
-    return this._wrapPromise(promise);
+    return this._handleResult(promise);
   }
 
   likeCard(id) {
@@ -82,7 +78,7 @@ class Api {
       headers: this._headers
     })
 
-    return this._wrapPromise(promise);
+    return this._handleResult(promise);
   }
 
   unlikeCard(id) {
@@ -91,10 +87,10 @@ class Api {
       headers: this._headers
     })
 
-    return this._wrapPromise(promise);
+    return this._handleResult(promise);
   }
 
-  _wrapPromise(promise) {
+  _handleResult(promise) {
     return promise
       .then(res => {
         if (res.ok) { return res.json() }
