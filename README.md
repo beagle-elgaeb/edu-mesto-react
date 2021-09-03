@@ -1,48 +1,63 @@
-# Место React
+# Место (React версия)
   
 ## Четвёртая учебная работа Никоновой Евгении для Яндекс.Практикум  
 _[Ссылка на страницу на GitHub Pages](https://beagle-elgaeb.github.io/mesto-react/)_  
   
-### Описание:  
-Получившееся web-приложение позволяет пользователю просматривать галерею фотографий тех мест, где побывали другие пользователи, а так же добавлять фотографии тех мест, где побывал он сам.  
+<p>
+  <a href="https://developer.mozilla.org/ru/docs/Web/CSS"><img src="readme/icon-css3.svg" alt="CSS3"></a>  
+  <img src="readme/icon-whitespace-5px.svg"/>
+  <a href="https://developer.mozilla.org/ru/docs/Glossary/HTML5"><img src="readme/icon-html5.svg" alt="HTML5"></a>  
+  <img src="readme/icon-whitespace-5px.svg"/>
+  <a href="https://ru.bem.info/"><img src="readme/icon-bem.svg" alt="БЭМ"></a>
+  <img src="readme/icon-whitespace-5px.svg"/>
+  <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript"><img src="readme/icon-js.svg" alt="JS"></a>
+  <img src="readme/icon-whitespace-5px.svg"/>
+  <a href="https://npmjs.com/"><img src="readme/icon-npm.svg" alt="NPM"></a>
+  <img src="readme/icon-whitespace-5px.svg"/>
+  <a href="https://webpack.js.org/"><img src="readme/icon-webpack.svg" alt="WebPack"></a>
+  <img src="readme/icon-whitespace-5px.svg"/>
+  <a href="https://ru.wikipedia.org/wiki/REST"><img src="readme/icon-api.svg" alt="REST API"></a>
+  <img src="readme/icon-whitespace-5px.svg"/>
+  <a href="https://ru.reactjs.org/"><img src="readme/icon-react.svg" alt="React"></a>
+</p>
   
-### Функциональность проекта:  
-1. отображение и редактирование данных пользователя, аватара на сервере;  
-2. загрузка с сервера галереи фотографий мест, где пользователи побывали;  
-3. добавление новых фотографий мест на сервер;  
-4. оценка своих фотографий и фотографий других пользователей лайками;  
-5. удаление своих фотографий с сервера;  
-6. (~~лайв валидация форм~~);  
-7. страница размещена на GitHub Pages;  
-8. страница адаптируется с контрольными точками: 320px, 680px, 980px; 1280px.  
+### Описание  
+В данном учебном проекте _[предыдущий проект](https://github.com/beagle-elgaeb/mesto)_ портирован на React  
+Получившееся web-приложение позволяет пользователю просматривать галерею фотографий тех мест, где побывали другие пользователи, а так же добавлять фотографии тех мест, где побывал он сам, оценивать фотографии лайками, удалять свои фотографии.  
   
-### Задачи проекта:  
-1. тренировка полученных навыков;  
-2. демонстрация полученных навыков;  
-3. демонстрация способности самостоятельно находить ответы на свои вопросы в сторонних источниках.  
+### Функциональность проекта  
+* загрузка профиля пользователя и фотографий с сервера;  
+* возможность редактирования профиля, добавления, удаления и оценки лайками фотографий;    
+* проработан UX (при отправке данных на сервер меняется состояние кнопки);  
+* [страница размещена на GitHub Pages](https://beagle-elgaeb.github.io/mesto-react/);  
+* страница адаптируется с контрольными точками: 320px, 680px, 980px; 1280px.  
   
-### Использованные технологии:  
-* HTML, CSS (flexbox- и Grid-вёрстка)  
-* БЭМ  
-* Git, GitHub Pages  
-* Адаптивная вёрстка  
-* JS  
-* NPM  
-* WebPack    
-* REST API  
-* React (hooks)  
+### Задачи учебного проекта  
+* тренировка и демонстрация полученных навыков;  
+* демонстрация способности самостоятельно находить ответы на свои вопросы в сторонних источниках.  
+  
+### Планы на дальнейшую реализацию проекта  
+* Добавить лайв валидацию  
+* Добавить возможность регистрации в приложении  
 
-### Планы на дальнейшую ревлизацию проекта:  
-* Продолжить реорганизацию проекта под React  
-* Сделать лайв валидацию  
-
-_Дата первой готовности ПР 11: 29.08.2021_  
-_Дата сдачи ПР 10:   .08.2021_  
-
+### Как использовать
+Сборка:  
+<pre><code>npm run build</pre></code>  
+Локальный запуск:  
+<pre><code>npm start</pre></code>  
+Работа с GH Pages:  
+<pre><code>npm install gh-pages --save-dev  - установка пакета
+npm run deploy                   - деплой</pre></code>  
+  
+## Связаться со мной  
+<p>
+  <a href="https://t.me/evgevgevge"><img src="readme/icon-tg.svg" alt="Telegram"></a>
+    <img src="readme/icon-whitespace-5px.svg"/>
+  <a href="mailto:beagle-elgaeb@ya.ru"><img src="readme/icon-mail.svg" alt="Mail"></a>
+    <img src="readme/icon-whitespace-5px.svg"/>
+  <a href="https://www.instagram.com/evg._.su/"><img src="readme/icon-inst.svg" alt="Instagram"></a>
+</p>
+  
+### Учебная информация
+_Дата сдачи ПР 11: 01.09.2021_  
 _Дата сдачи ПР 10: 16.08.2021_  
-_Дата сдачи ПР 9: 31.07.2021 [Ссылка на макет в Figma](https://www.figma.com/file/PSdQFRHoxXJFs2FH8IXViF/JavaScript-9-sprint)_  
-_Дата сдачи ПР 8: 13.07.2021_  
-_Дата сдачи ПР 7: 24.06.2021_  
-_Дата сдачи ПР 6: 13.06.2021 [Ссылка на макет в Figma](https://www.figma.com/file/bjyvbKKJN2naO0ucURl2Z0/JavaScript.-Sprint-6)_  
-_Дата сдачи ПР 5: 02.06.2021 [Ссылка на макет в Figma](https://www.figma.com/file/bjyvbKKJN2naO0ucURl2Z0/JavaScript.-Sprint-5)_  
-_Дата сдачи ПР 4: 20.05.2021 [Ссылка на макет в Figma](https://www.figma.com/file/bjyvbKKJN2naO0ucURl2Z0/JavaScript.-Sprint-4)_  
