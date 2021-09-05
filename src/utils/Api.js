@@ -15,7 +15,7 @@ class Api {
     return this._handleResult(promise);
   }
 
-  getProfileData() {
+ getProfileData() {
     const promise = fetch(`${this._baseUrl}/${this._groupID}/users/me`, {
       headers: {
         authorization: this._headers.authorization
