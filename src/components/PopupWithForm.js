@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import buttonClosePopup from "../images/button-сlose.svg";
 
-function PopupWithForm({ title, name, buttonText, children, onSubmit, isOpen, onClose }) {
+function PopupWithForm({ title, name, buttonText, children, isOpen, disabledSubmit, onSubmit, onClose }) {
   const [isSubmit, setIsSubmit] = React.useState(false);
 
   React.useEffect(() => {
@@ -23,7 +23,7 @@ function PopupWithForm({ title, name, buttonText, children, onSubmit, isOpen, on
         <h2 className="popup__title">{title}</h2>
         <form className={`popup__form popup__form_type_${name} `} name={`form - ${name}`} onSubmit={handleSubmit} >
           {children}
-          <button className="popup__button-save" type="submit" aria-label="Сохранить">
+          <button className={`popup__button-save ${disabledSubmit ? "popup__button-save_disabled" : ""}`} type="submit" aria-label="Сохранить" disabled={disabledSubmit}>
             {buttonText}{isSubmit ? "..." : ""}
           </button>
         </form>
@@ -40,8 +40,9 @@ PopupWithForm.propTypes = {
   name: PropTypes.string.isRequired,
   buttonText: PropTypes.string.isRequired,
   children: PropTypes.element.isRequired,
-  onSubmit: PropTypes.func.isRequired,
   isOpen: PropTypes.bool.isRequired,
+  disabledSubmit: PropTypes.bool.isRequired,
+  onSubmit: PropTypes.func.isRequired,
   onClose: PropTypes.func.isRequired,
 }
 

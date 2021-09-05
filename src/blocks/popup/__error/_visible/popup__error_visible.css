@@ -1,4 +1,4 @@
-.popup__error_visible {
+.popup__error {
   width: 358px;
   height: 0;
   overflow: visible;
@@ -11,7 +11,7 @@
 }
 
 @media screen and (max-width: 680px) {
-  .popup__error_visible {
+  .popup__error {
     width: 238px;
   }
 }

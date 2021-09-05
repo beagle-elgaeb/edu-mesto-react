@@ -70,7 +70,7 @@ function App() {
       })
   }
 
-  function handleUpdateAvatar(avatar) {
+  function handleUpdateAvatar({ avatar }) {
     api.setAvatar(avatar)
       .then((result) => {
         setCurrentUser(result);
@@ -143,11 +143,13 @@ function App() {
           <Footer />
         </div>
 
-        <EditProfilePopup
-          onUpdateUser={handleUpdateUser}
-          isOpen={editProfilePopupOpen}
-          onClose={closeAllPopups}
-        />
+        {currentUser.name &&
+          <EditProfilePopup
+            onUpdateUser={handleUpdateUser}
+            isOpen={editProfilePopupOpen}
+            onClose={closeAllPopups}
+          />
+        }
 
         <EditAvatarPopup
           onUpdateAvatar={handleUpdateAvatar}
