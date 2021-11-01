@@ -2,7 +2,7 @@
 
 ## Четвёртая учебная работа Никоновой Евгении для Яндекс.Практикум
 
-_[Ссылка на страницу на GitHub Pages](https://beagle-elgaeb.github.io/mesto-react/)_
+_[Ссылка на страницу на GitHub Pages](https://beagle-elgaeb.github.io/edu-mesto-react/)_
 
 <p>
   <a href="https://developer.mozilla.org/ru/docs/Web/CSS"><img src="readme/icon-css3.svg" alt="CSS3"></a>
@@ -26,7 +26,7 @@ _[Ссылка на страницу на GitHub Pages](https://beagle-elgaeb.gi
 
 ### Описание
 
-В данном учебном проекте _[предыдущий проект](https://github.com/beagle-elgaeb/mesto)_ портирован на React.  
+В данном учебном проекте _[предыдущий проект](https://github.com/beagle-elgaeb/edu-mesto)_ портирован на React.  
 Получившееся web-приложение позволяет пользователю просматривать галерею фотографий тех мест, где побывали другие пользователи, а так же добавлять фотографии тех мест, где побывал он сам, оценивать фотографии лайками, удалять свои фотографии.
 
 ### Функциональность проекта
@@ -35,7 +35,7 @@ _[Ссылка на страницу на GitHub Pages](https://beagle-elgaeb.gi
 - возможность редактирования профиля, добавления, удаления и оценки лайками фотографий;
 - лайф валидация с _[Formik](https://formik.org/)_ и _[Yup](https://github.com/jquense/yup)_;
 - проработан UX (при отправке данных на сервер меняется состояние кнопки);
-- [страница размещена на GitHub Pages](https://beagle-elgaeb.github.io/mesto-react/);
+- [страница размещена на GitHub Pages](https://beagle-elgaeb.github.io/edu-mesto-react/);
 - страница адаптируется с контрольными точками: 320px, 680px, 980px, 1280px.
 
 ### Задачи учебного проекта
